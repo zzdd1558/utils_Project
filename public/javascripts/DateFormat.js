@@ -1,3 +1,5 @@
+
+
 class DateFormat {
 
     constructor() {
@@ -84,3 +86,5 @@ class DateFormat {
 }
 
 
+data = new DateFormat()
+console.log(data.getFullDays())
