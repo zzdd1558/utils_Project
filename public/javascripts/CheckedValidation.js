@@ -7,7 +7,7 @@
  * password :
  * email :
  * phoneNumber
- * 
+ *
  * */
 class CheckedValidation {
 

@@ -12,6 +12,8 @@ class DateFormat {
         this._month = this._date.getMonth() + 1 ;
         // 일
         this._days = this._date.getDate();
+
+        this._maxBirth = 120;
     }
 
     // 날째 직접 세팅.
@@ -82,6 +84,11 @@ class DateFormat {
 
         // 4 , 6 , 9 ,11 달은 30일 , 2월을 제외한 나머지 달은 31일
         return this._isThirtyMonth.includes(month) ? 30 : 31
+    }
+
+
+    getMaxBirth (){
+        return this._year - this._maxBirth;
     }
 }
 
