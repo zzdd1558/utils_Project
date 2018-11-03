@@ -1,21 +1,20 @@
-
-
 // 정규식 사용
 /**
  *
  * id :
  * password :
  * email :
- * phoneNumber
+ * phoneNumber :
  *
  * */
 class CheckedValidation {
 
-    constructor(){
-
+    constructor() {
+        this.regExpType = {
+            id: /^[0-9]/,
+            password: "",
+            email: "",
+            phoneNum: ""
+        }
     }
 }
-
-
-
-checkedValidation = new CheckedValidation();
