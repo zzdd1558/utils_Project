@@ -40,4 +40,4 @@ class CheckedValidation {
 }
 
 let valid = new CheckedValidation()
-console.log(valid.phoneValidation("010037712345"));
+console.log(valid.phoneValidation("011ㄱ37712345"));
