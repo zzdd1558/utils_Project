@@ -11,18 +11,17 @@ class CheckedValidation {
 
     constructor() {
         this.regExpType = {
-            id: /^[0-9]/,
-            password: "",
-            email: "",
+            idRegex: /^$/,
+            passwordRegex: /^$/,
+            emailRegex: /^$/,
+            phoneRegex : /^01[0|1|6|7|8|9]{1}-?\d{3,4}-?\d{4}$/
         }
     }
 
 
-    phoneValidationTest(value){
+    phoneValidation(value){
 
-        let phoneRegex = /^01[0|1|6|7|8|9]{1}/
-
-        return this.validate(value , phoneRegex)
+        return this.validate(value , this.regExpType.phoneRegex)
     }
 
     validate ( value , regex ) {
@@ -41,4 +40,4 @@ class CheckedValidation {
 }
 
 let valid = new CheckedValidation()
-console.log(valid.phoneValidationTest("010"));
+console.log(valid.phoneValidation("010037712345"));
