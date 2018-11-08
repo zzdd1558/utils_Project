@@ -11,13 +11,20 @@ class CheckedValidation {
 
     constructor() {
         this.regExpType = {
-            idRegex: /^$/,
-            passwordRegex: /^$/,
+            idRegex: /^[a-zA-Z0-9]{4,12}$/,
+            passwordRegex: /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{6,16}/,
             emailRegex: /^$/,
             phoneRegex : /^01[0|1|6|7|8|9]{1}-?\d{3,4}-?\d{4}$/
         }
     }
 
+    idValidation(value){
+      return this.validate(value , this.regExpType.idRegex)
+    }
+
+    passwordValidation(value){
+      return this.validate(value , this.regExpType.passwordRegex)
+    }
 
     phoneValidation(value){
 
