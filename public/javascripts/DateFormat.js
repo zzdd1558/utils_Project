@@ -1,4 +1,10 @@
 
+/**
+ *
+ * 날짜 관련 util추가 , 회원 가입및 윤년 윤월 계산적용
+ *
+ * @author 최윤진 < zzdd1558@gmail.com >
+ * */
 
 class DateFormat {
 
