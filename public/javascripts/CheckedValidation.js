@@ -1,10 +1,10 @@
 // 정규식 사용
 /**
  *
- * id : @김윤권
- * password : @김윤권
+ * id : @김윤권 < vusdlq007@naver.com >
+ * password : @김윤권 < vusdlq007@naver.com >
  * email : @배준
- * phoneNumber : @최윤진
+ * phoneNumber : @최윤진 < zzdd1558@gmail.com>
  *
  * */
 class CheckedValidation {
@@ -47,4 +47,3 @@ class CheckedValidation {
 }
 
 let valid = new CheckedValidation()
-console.log(valid.phoneValidation("011ㄱ37712345"));
