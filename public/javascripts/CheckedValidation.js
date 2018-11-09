@@ -11,8 +11,8 @@ class CheckedValidation {
 
     constructor() {
         this.regExpType = {
-            idRegex: /^[a-zA-Z0-9]{4,12}$/,
-            passwordRegex: /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{6,16}/,
+            idRegex: /^[a-zA-Z0-9]{4,12}$/,     // 영문 대소문자및 숫자 4~12자리
+            passwordRegex: /^[a-zA-Z0-9!@#$%^&*()?_~]{6,15}$/, // 영문 대소문자및 숫자 및 특수기호포함 6~15자리
             emailRegex: /^$/,
             phoneRegex : /^01[0|1|6|7|8|9]{1}-?\d{3,4}-?\d{4}$/
         }
