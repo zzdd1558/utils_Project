@@ -1,6 +1,6 @@
 $(function () {
     $('#MemberChkBtn').on("click", function () {
-        var $chk = new CheckedValidation();
+        let $chk = new CheckedValidation();
 
         if (!$chk.idValidation($("input[name='id']").val())) {
             alert("아이디를 다시 입력해주세요.\n *아이디는 영문대소문자,숫자 포함 4~12자리로입력");
