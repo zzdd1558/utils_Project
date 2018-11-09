@@ -1,38 +1,29 @@
-doctype html
-html
-    head
-        script(src="https://code.jquery.com/jquery-3.3.1.min.js")
-        title= title
-        link(rel='stylesheet', href='/stylesheets/style.css')
-        link(rel='stylesheet', href='/bootstrap/css/bootstrap.css')
-        script(src="/__bundles/dateformat.bundle.js")
-        script(src="/javascripts/MainFunction.js")
-        script(src="/javascripts/CheckedValidation.js")
+extends layout
 
-    body
-        block content
-          div(class="row" style="margin-top:40px;")
-            nav(class="navbar navbar-default navbar-fixed-top ")
-                  h2(style="align: left") 유틸 Test Project
-                    div(class="col-sm-3 pull-right")
-                        select(id='type' class="form-control")
-                          option(value="회원가입" selected) 회원가입 유효성체크 기능 (Ex)
-                          option(value="") 카카오 공유하기 기능 (Ex)
+block content
+    div(class="row" style="margin-top:40px;")
+        nav(class="navbar navbar-default navbar-fixed-top ")
+            h2(style="align: left") 유틸 Test Project
+                div(class="col-sm-3 pull-right")
+                    select(id='type' class="form-control")
+                        option(value="회원가입" selected) 회원가입 유효성체크 기능 (Ex)
+                        option(value="") 카카오 공유하기 기능 (Ex)
 
-          div(class="row" id="MemberValidation" style="display:block")
-            div(class="col-xs-8 col-md-4"  style="margin-top:20px;")
-              span 아이디 :
-              input(type="text" name="id" class="form-control" style="margin-bottom:20px;")
-              span 비밀번호 :
-              input(type="password" name="pwd" class="form-control")
-            div(class="col-xs-12 col-md-6"  style="margin-top:20px;")
-              span 이메일 :
-              input(type="text" name="email" class="form-control" style="margin-bottom:20px;")
-              span 주소 :
-              input(type="text" name="adress" class="form-control")
-            div(class="col-xs-12 col-md-10"  style="margin-top:20px;")
-              button(type="button" value="가입 " id="MemberChkBtn" class="btn btn-primary pull-right") 가입
+    div(class="row" id="MemberValidation" style="display:block")
+        div(class="col-xs-8 col-md-4"  style="margin-top:20px;")
+            span 아이디 :
+                input(type="text" name="id" class="form-control" style="margin-bottom:20px;")
+                span 비밀번호 :
+                input(type="password" name="pwd" class="form-control")
+        div(class="col-xs-12 col-md-6"  style="margin-top:20px;")
+            span 이메일 :
+                input(type="text" name="email" class="form-control" style="margin-bottom:20px;")
+                span 주소 :
+                input(type="text" name="adress" class="form-control")
+        div(class="col-xs-12 col-md-10"  style="margin-top:20px;")
+            button(type="button" value="가입 " id="MemberChkBtn" class="btn btn-primary pull-right") 가입
+
+    script(src="/javascripts/MainFunction.js")
+    script(src="/javascripts/CheckedValidation.js")
 
 
-
-        script(type="text/javascript" src="/bootstrap/js/bootstrap.js")
