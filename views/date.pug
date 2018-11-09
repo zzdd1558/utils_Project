@@ -1,9 +1,8 @@
 extends layout
 
 block content
-
     .container-fluid
-        .row style="margin-top:40px;")
+        .row(style="margin-top:40px;")
             nav.navbar.navbar-default.navbar-fixed-top
                 h2(style="align: left") 유틸 Test Project
                     .col-sm-3.pull-right
@@ -22,10 +21,7 @@ block content
                     input#email.form-control(type="text" style="margin-bottom:20px;")
                     span 주소 :
                     input#address.form-control(type="text")
-            .col-xs-12.col-md-10 ( style="margin-top:20px;")
+            .col-xs-12.col-md-10(style="margin-top:20px;")
                 button#MemberChkBtn.btn.btn-primary.pull-right(type="button" value="가입 " ) 가입
-
     script(src="/javascripts/MainFunction.js")
     script(src="/javascripts/CheckedValidation.js")
-
-
