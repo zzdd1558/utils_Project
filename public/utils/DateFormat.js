@@ -33,7 +33,7 @@ class DateFormat {
     // 오늘
     getToday() {
 
-        return `${this.getCurrYear()}년 ${this.getCurrMonth()}월 ${this.getCurrDays()}일`;
+        return `${this.getCurrYear()}/${this.getCurrMonth()}/${this.getCurrDays()}`;
     }
 
     // 설정된 현재 년도.
@@ -97,7 +97,3 @@ class DateFormat {
         return this._year - this._maxBirth;
     }
 }
-
-
-data = new DateFormat()
-console.log(data.getFullDays())
