@@ -12,14 +12,6 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
-
-// 미들웨어 테스트
-app.use((req , res , next) => {
-
-    console.log(`${req.url} : 미들웨어 테스트중.`);
-    next();
-});
-
 app.use(logger('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
