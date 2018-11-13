@@ -14,7 +14,8 @@ class CheckedValidation {
             idRegex: /^[a-zA-Z0-9]{4,12}$/,     // 영문 대소문자및 숫자 4~12자리
             passwordRegex: /^[a-zA-Z0-9!@#$%^&*()?_~]{6,15}$/, // 영문 대소문자및 숫자 및 특수기호포함 6~15자리
             emailRegex: /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i,
-            phoneRegex : /^01[0|1|6|7|8|9]{1}-?\d{3,4}-?\d{4}$/
+            phoneRegex : /^01[0|1|6|7|8|9]{1}\-?\d{3,4}\-?\d{4}$/ ,
+            userUniqueNumber : /^\d{6}\-[1-4]\d{6}$/
         }
     }
 
@@ -34,6 +35,10 @@ class CheckedValidation {
       return this.validate(value , this.regExpType.emailRegex)
     }
 
+    userUniqueNumber(value){
+        return this.validate(value , this.regExpType.userUniqueNumber)
+    }
+
     validate ( value , regex ) {
         return regex.test(value) && this.isSet(value)
     }
@@ -49,3 +54,4 @@ class CheckedValidation {
 }
 
 let valid = new CheckedValidation()
+console.log(valid.userUniqueNumber("930925-5207036"));
