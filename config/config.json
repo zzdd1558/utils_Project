@@ -1,10 +1,10 @@
 {
   "development": {
     "username": "root",
-    "password": "P@ssw0rd12#4",
-    "database": "nodejs",
-    "port" : 3307,
-    "host": "183.101.164.232",
+    "password": "PASSWORD",
+    "database": "DB_NAME",
+    "port" : 3306,
+    "host": "IP",
     "dialect": "mysql"
   },
 
