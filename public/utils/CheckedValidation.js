@@ -30,7 +30,7 @@ class CheckedValidation {
         return this.validate(value , this.regExpType.phoneRegex)
     }
 
-    emailVaildation(value){
+    emailValidation(value){
       return this.validate(value , this.regExpType.emailRegex)
     }
 
