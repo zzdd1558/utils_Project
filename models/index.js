@@ -15,4 +15,4 @@ db.sequelize = sequelize;
 db.User = require("./user")(sequelize , Sequelize);
 db.Comment = require("./comment")(sequelize , Sequelize);
 
-module.export = db;
+module.exports = db;
