@@ -4,7 +4,7 @@ const webpack = require('webpack');
 module.exports = {
     mode: 'development',
     entry: {
-        checkedValid : ['./public/javascripts/MainFunction.js']
+        signUp : ['./public/javascripts/MainFunction.js']
     },
     output: {
         path: __dirname + '/public/__bundles',

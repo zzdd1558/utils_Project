@@ -8,6 +8,8 @@ let sequelize = require("./models");
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+let signUpRouter = require('./routes/signUp');
+
 var app = express();
 
 sequelize.sequelize.sync();
@@ -24,6 +26,7 @@ app.use(cookieParser());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/signup' , signUpRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
