@@ -4,7 +4,7 @@ const webpack = require('webpack');
 module.exports = {
     mode: 'development',
     entry: {
-        dateformat: './public/javascripts/DateFormat.js',
+        checkedValid : ['./public/javascripts/MainFunction.js']
     },
     output: {
         path: __dirname + '/public/__bundles',

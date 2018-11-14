@@ -1,3 +1,6 @@
+
+import CheckedValidation from "../../utils/CheckedValidation";
+
 $(function () {
     $('#MemberChkBtn').on("click", function () {               // "가입" 버튼 클릭시 이벤트 발생
         var $chk = new CheckedValidation();

@@ -51,7 +51,7 @@ class SocialShare {
                 this.title = 'Twitter 공유하기';
                 break;
 
-            case  this.SOCIALTYPE.NAVER:
+            case  this.SOCIALTYPE.NAVE:
                 this.url = this.socialURL.naver;
                 this.title = 'Naver 공유하기';
                 break;
@@ -61,3 +61,5 @@ class SocialShare {
         window.open(this.url , this.title , 'width=672, height=561, toolbar=no, menubar=no, scrollbars=no, resizable=yes');
     }
 }
+
+module = SocialShare

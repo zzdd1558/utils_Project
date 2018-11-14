@@ -56,3 +56,5 @@ class CheckedValidation {
     }
 
 }
+
+module.exports = CheckedValidation

@@ -97,3 +97,5 @@ class DateFormat {
         return this._year - this._maxBirth;
     }
 }
+
+module = DateFormat

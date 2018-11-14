@@ -13,15 +13,14 @@ block content
         .row#MemberValidation(style="display:block")
             .col-xs-8.col-md-4(style="margin-top:20px;")
                 span 아이디 :
-                    input#id.form-control(type="text" style="margin-bottom:20px;")
+                    input#id.form-control(type="text" style="margin-bottom:20px;" name="id")
                     span 비밀번호 :
-                    input#pwd.form-control(type="password")
+                    input#pwd.form-control(type="password" name="pwd")
             .col-xs-12.col-md-6( style="margin-top:20px;")
                 span 이메일 :
-                    input#email.form-control(type="text" style="margin-bottom:20px;")
+                    input#email.form-control(type="text" style="margin-bottom:20px;" name="email")
                     span 주소 :
-                    input#address.form-control(type="text")
+                    input#address.form-control(type="text" name="address")
             .col-xs-12.col-md-10(style="margin-top:20px;")
                 button#MemberChkBtn.btn.btn-primary.pull-right(type="button" value="가입 " ) 가입
-    script(src="/javascripts/MainFunction.js")
-    script(src="/utils/CheckedValidation.js")
+    script(src="/__bundles/checkedValid.bundle.js")
