@@ -18,44 +18,41 @@ class CheckedValidation {
             idRegex: /^[a-zA-Z0-9]{4,12}$/,
             passwordRegex: /^[a-zA-Z0-9!@#$%^&*()?_~]{6,15}$/,
             emailRegex: /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i,
-            phoneRegex : /^01[0|1|6|7|8|9]{1}\-?\d{3,4}\-?\d{4}$/ ,
-            userUniqueNumber : /^\d{6}\-[1-4]\d{6}$/
+            phoneRegex: /^01[0|1|6|7|8|9]{1}\-?\d{3,4}\-?\d{4}$/,
+            userUniqueNumber: /^\d{6}\-[1-4]\d{6}$/
         }
     }
 
-    idValidation(value){
-      return this.validate(value , this.regExpType.idRegex)
+    idValidation(value) {
+        return this.validate(value, this.regExpType.idRegex)
     }
 
-    passwordValidation(value){
-      return this.validate(value , this.regExpType.passwordRegex)
+    passwordValidation(value) {
+        return this.validate(value, this.regExpType.passwordRegex)
     }
 
-    phoneValidation(value){
-        return this.validate(value , this.regExpType.phoneRegex)
+    phoneValidation(value) {
+        return this.validate(value, this.regExpType.phoneRegex)
     }
 
-    emailValidation(value){
-      return this.validate(value , this.regExpType.emailRegex)
+    emailValidation(value) {
+        return this.validate(value, this.regExpType.emailRegex)
     }
 
-    userUniqueNumber(value){
-        return this.validate(value , this.regExpType.userUniqueNumber)
+    userUniqueNumber(value) {
+        return this.validate(value, this.regExpType.userUniqueNumber)
     }
 
-    validate ( value , regex ) {
+    validate(value, regex) {
         return regex.test(value) && this.isSet(value)
     }
 
-    isSet ( value ) {
+    isSet(value) {
         return !this.isUndefined(value) && (value.length > 0 || value > 0);
     }
 
-    isUndefined ( value ) {
+    isUndefined(value) {
         return typeof value === "undefined";
     }
 
 }
-
-let valid = new CheckedValidation()
-console.log(valid.userUniqueNumber("930925-5207036"));
