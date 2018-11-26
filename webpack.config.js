@@ -4,6 +4,7 @@ const webpack = require('webpack');
 module.exports = {
     mode: 'development',
     entry: {
+        common : ['./public/javascripts/common.js'],
         signUp : ['./public/javascripts/MainFunction.js']
     },
     output: {

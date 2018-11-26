@@ -2,6 +2,18 @@
 import CheckedValidation from "../../utils/CheckedValidation";
 import DateFormat from "../../utils/DateFormat";
 
+window.load = () => {
+    let id = document.getElementById("id");
+    let passwd = document.getElementById("passwd");
+    let passwdConfirm = document.getElementById("passwd-confirm");
+    let email = document.getElementById("email");
+    let submitBtn = document.getElementById("memberChkBtn");
+
+
+
+};
+
+
 $(function () {
     $('#MemberChkBtn').on("click", function () {               // "가입" 버튼 클릭시 이벤트 발생
         var $chk = new CheckedValidation();

@@ -1,26 +1,37 @@
 extends layout
 
 block content
-    .container-fluid
-        .row(style="margin-top:40px;")
-            nav.navbar.navbar-default.navbar-fixed-top
-                h2(style="align: left") 유틸 Test Project
-                    .col-sm-3.pull-right
-                        select#type.form-control
-                            option(value="회원가입" selected) 회원가입 유효성체크 기능 (Ex)
-                            option(value="") 카카오 공유하기 기능 (Ex)
+    .container
+        form
+            .form-row
+                .form-group.col-lg-12
+                    label 아이디
+                    input.form-control#user-id(type="text")
+            .form-row
+                .form-group.col-lg-6
+                    label 비밀번호
+                    input.form-control#passwd(type="password")
+                .form-group.col-lg-6
+                    label 비밀번호 확인
+                    input.form-control#passwd-confirm(type="password")
 
-        .row#MemberValidation(style="display:block")
-            .col-xs-8.col-md-4(style="margin-top:20px;")
-                span 아이디 :
-                    input#id.form-control(type="text" style="margin-bottom:20px;" name="id")
-                    span 비밀번호 :
-                    input#pwd.form-control(type="password" name="pwd")
-            .col-xs-12.col-md-6( style="margin-top:20px;")
-                span 이메일 :
-                    input#email.form-control(type="text" style="margin-bottom:20px;" name="email")
-                    span 주소 :
-                    input#address.form-control(type="text" name="address")
-            .col-xs-12.col-md-10(style="margin-top:20px;")
-                button#MemberChkBtn.btn.btn-primary.pull-right(type="button" value="가입 " ) 가입
+            .form-row
+                .form-group.col-lg-12
+                    label 이메일
+                    input.form-control#email(type="email")
+            .form-row
+                .form-group.col-lg-4
+                    label 년도
+                    select.form-control#user-year
+                .form-group.col-lg-4
+                    label 월
+                    select.form-control#user-month
+                .form-group.col-lg-4
+                    label 일
+                    select.form-control#user-day
+            .form-row
+                .form-group
+                    button.btn.btn-primary.right(type="submit") 가입
+                    button.btn.btn-primary(type="submit") 취소
+
     script(src="/__bundles/signUp.bundle.js")
