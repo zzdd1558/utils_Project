@@ -3,7 +3,7 @@
   !*** ./public/javascripts/common.js ***!
   \**************************************/
 /*! no static exports found */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(module,exports,__webpack_require__){eval('\nconst PAGE_LIST = __webpack_require__(/*! ../../utils/PageList */ "./utils/PageList.js").pageList;\n\nwindow.onload = () => {\n    let selectType = document.getElementById("type");\n    console.log(PAGE_LIST)\n\n    Object.keys(PAGE_LIST).map((v) => {\n        let option = document.createElement("option");\n        option.text = PAGE_LIST[v].name\n        option.dataset.href = PAGE_LIST[v].path\n        selectType.append(option)\n    } )\n\n\n\n\n\n}\n\n\n//# sourceURL=webpack:///./public/javascripts/common.js?')},"./utils/PageList.js":
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(module,exports,__webpack_require__){eval('\nconst PAGE_LIST = __webpack_require__(/*! ../../utils/PageList */ "./utils/PageList.js").pageList;\n\n\nwindow.onload = () => {\n    let selectType = document.getElementById("type");\n    console.log(PAGE_LIST)\n\n    Object.keys(PAGE_LIST).map((v) => {\n        let option = document.createElement("option");\n        option.text = PAGE_LIST[v].name\n        option.dataset.href = PAGE_LIST[v].path\n        selectType.append(option)\n    });\n\n\n    selectType.addEventListener("change" , () => {\n        let redirectHref = selectType.options[selectType.selectedIndex].dataset.href;\n        window.location.href = redirectHref;\n    })\n\n}\n\n\n//# sourceURL=webpack:///./public/javascripts/common.js?')},"./utils/PageList.js":
 /*!***************************!*\
   !*** ./utils/PageList.js ***!
   \***************************/
