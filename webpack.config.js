@@ -5,7 +5,7 @@ module.exports = {
     mode: 'development',
     entry: {
         common : ['./public/javascripts/common.js'],
-        signUp : ['./public/javascripts/MainFunction.js']
+        signUp : ['./public/javascripts/signForm.js']
     },
     output: {
         path: __dirname + '/public/__bundles',

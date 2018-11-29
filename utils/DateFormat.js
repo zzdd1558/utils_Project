@@ -71,20 +71,21 @@ class DateFormat {
     }
 
     // 윤년 계산 .
-    isLeapYear(year = this._year) {
+    isLeapYear(year) {
 
         return year % 4 === 0 &&  year % 100 !== 0  ||  year % 400 === 0
     }
 
     // 윤년 윤월을 계산한 요일 반환.
-    getFullDays (month = this._month){
+    getFullDays (year = this._year , month = this._month){
 
+        month = Number(month)
         // 2월이면서 윤년일 경우 28일을 반환 . 아니면 29일.
         if (month == 2) {
-            if (this.isLeapYear() ) {
-                return 28
-            } else{
+            if (this.isLeapYear(year) ) {
                 return 29
+            } else{
+                return 28
             }
         }
 

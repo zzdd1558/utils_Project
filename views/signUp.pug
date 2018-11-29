@@ -26,12 +26,24 @@ block content
                 .form-group.col-lg-4
                     label 월
                     select.form-control#user-month
+                        option(value=1) 1
+                        option(value=2) 2
+                        option(value=3) 3
+                        option(value=4) 4
+                        option(value=5) 5
+                        option(value=6) 6
+                        option(value=7) 7
+                        option(value=8) 8
+                        option(value=9) 9
+                        option(value=10) 10
+                        option(value=11) 11
+                        option(value=12) 12
                 .form-group.col-lg-4
                     label 일
                     select.form-control#user-day
             .form-row
                 .form-group
-                    button.btn.btn-primary.right(type="submit") 가입
-                    button.btn.btn-primary(type="submit") 취소
+                    button#signup.btn.btn-primary.right(type="submit") 가입
+                    button#cancel.btn.btn-primary 취소
 
     script(src="/__bundles/signUp.bundle.js")
