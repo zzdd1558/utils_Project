@@ -19,8 +19,9 @@ class CheckedValidation {
             passwordRegex: /^[a-zA-Z0-9!@#$%^&*()?_~]{6,15}$/,
             emailRegex: /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i,
             phoneRegex: /^01[0|1|6|7|8|9]{1}\-?\d{3,4}\-?\d{4}$/,
-            userUniqueNumber: /^\d{6}\-[1-4]\d{6}$/
+            birthdayRegex : /^\d{8}$/
         }
+    //    userUniqueNumber: /^\d{6}\-[1-4]\d$/
     }
 
     idValidation(value) {
@@ -39,8 +40,8 @@ class CheckedValidation {
         return this.validate(value, this.regExpType.emailRegex)
     }
 
-    userUniqueNumber(value) {
-        return this.validate(value, this.regExpType.userUniqueNumber)
+    birthdayValidation(value) {
+        return this.validate(value, this.regExpType.birthdayRegex)
     }
 
     validate(value, regex) {
